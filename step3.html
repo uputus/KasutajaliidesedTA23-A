@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maksmine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Maksmine</h1>
+
+        <div class="alert alert-success">
+            <p>Registreeritav domeen: <strong id="final-domain"></strong></p>
+            <p>Kogumaksumus: <strong>9.99€</strong></p>
+        </div>
+
+        <button class="btn btn-success" id="pay">Maksa nüüd</button>
+    </div>
+
+    <script>
+        document.getElementById('final-domain').textContent = sessionStorage.getItem("selectedDomain");
+
+        document.getElementById('pay').addEventListener('click', function () {
+            alert("Maksmine edukas! Domeen registreeritud.");
+            sessionStorage.removeItem("selectedDomain");
+            window.location.href = "step1.html";
+        });
+    </script>
+</body>
+</html>

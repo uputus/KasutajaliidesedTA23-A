@@ -1,0 +1,52 @@
+/* Domeeni valiku kastid */
+.domain-options {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Kuvame domeeni valikud, kui saadavus on kontrollitud */
+#check-availability:checked ~ .domain-options {
+    display: block;
+}
+
+/* Veateade alguses peidetud */
+.error-message {
+    display: none;
+    background-color: #ffdddd;
+    color: #d8000c;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+/* Kuvame veateate, kui domeen on juba hõivatud */
+#check-availability:checked ~ .error-message {
+    display: block;
+}
+
+/* Jätkamise nupp algselt peidetud */
+#continue-payment {
+    display: none;
+}
+
+/* Kuvame maksmise jätkamise nupu, kui domeen on valitud */
+#confirm-domain:checked ~ #continue-payment {
+    display: block;
+}
+
+/* Stiilne nupp */
+.button {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hover efekt nupul */
+.button:hover {
+    background-color: #0056b3;
+}
